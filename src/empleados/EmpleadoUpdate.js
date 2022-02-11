@@ -4,7 +4,7 @@ import { findByIdEmpleado, updateEmpleado } from '../service/EmpleadoService'
 
 
 function EmpleadosPage() {
-
+    const { empleadoId } = useParams();
     const [empleado, setEmpleado] = useState({ nombre: '', apellido: '', cedula: '', direccion: '', edad: '', telefono: '' });
 
     const onSubmit = (event) => {

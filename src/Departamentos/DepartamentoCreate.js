@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { createDepartamento } from '../service/DepartamentoService'
+import { createDepartamento } from '../service/DepartamentoService';
 
 
 

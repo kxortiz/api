@@ -1,6 +1,6 @@
 const urlCrud = 'http://localhost:8081';
 
-const getListDepartamento = async () => {
+const getListDepartamentos = async () => {
     const response = await fetch(`${urlCrud}/departamento`);
     const data = await response.json();
     return data;
@@ -14,12 +14,12 @@ const findByIdDepartamento = async (departamentoId) => {
 
 
 const createDepartamento = async (departamento) => {
-    const urldos="http://localhost:8081/consulta"
+    const urldos="http://localhost:8081/departamento"
     console.log(urldos)
 
     const resp = await fetch(urldos, {
         method: 'POST',
-        body: JSON.stringify(consulta),
+        body: JSON.stringify(departamento),
         headers: {
             'Content-type': 'application/json'
         }
@@ -28,11 +28,11 @@ const createDepartamento = async (departamento) => {
 }
 
 
-const updateDepartamento = async (Departamento) => {
+const updateDepartamento = async (departamento) => {
 
     const resp = await fetch(`${urlCrud}/departamento`, {
         method: 'PUT',
-        body: JSON.stringify(consulta),
+        body: JSON.stringify(departamento),
         headers: {
             'Content-type': 'application/json'
         }
@@ -41,7 +41,7 @@ const updateDepartamento = async (Departamento) => {
 }
 
 export {
-    getListDepartamento,
+    getListDepartamentos,
     createDepartamento,
     updateDepartamento,
     findByIdDepartamento

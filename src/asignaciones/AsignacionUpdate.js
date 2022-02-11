@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { findByIdAsignacion,updateAsignacion } from '../service/AsignacionService'
-import './Asignacion.css'
+
 
 function AsignacionesPage() {
   

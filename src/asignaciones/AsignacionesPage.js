@@ -19,7 +19,7 @@ function AsignacionesPage () {
     return (
         <div>
             
-            <Link to ='./createAsignacion'>
+            <Link to ='./createasignacion'>
                 Crear Asignacion
             </Link>
             <h2>LISTA DE Asignaciones</h2>

@@ -14,12 +14,12 @@ const findByIdAsignacion = async (asignacionId) => {
 
 
 const createAsignacion = async (asignacion) => {
-    const urldos="http://localhost:8081/consulta"
+    const urldos="http://localhost:8081/asignacion"
     console.log(urldos)
 
     const resp = await fetch(urldos, {
         method: 'POST',
-        body: JSON.stringify(consulta),
+        body: JSON.stringify(asignacion),
         headers: {
             'Content-type': 'application/json'
         }

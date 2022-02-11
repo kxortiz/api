@@ -1,14 +1,19 @@
-import DepartamentosPage from './Departamento/DepartamentosPage';
-import DepartamentoCreate from './Departamento/DepartamentoCreate';
-import DepartamentoUpdate from './Departamento/DepartamentoUpdate';
-import AsignacionesPage from '../asignaciones/AsignacionesPage';
-import AsignacionCreate from '../asignaciones/AsignacionCreate';
-import AsignacionUpdate from '../asignaciones/AsignacionUpdate';
-import EmpleadosPage from './empleado/EmpleadoPage';
-import EmpleadosCreate from './Pacientes/PacienteCreate';
-import EmpleadosUpdate from './Pacientes/PacienteUpdate';
+import DepartamentosPage from './Departamentos/DepartamentosPage';
+import DepartamentoCreate from './Departamentos/DepartamentoCreate';
+import DepartamentoUpdate from './Departamentos/DepartamentoUpdate';
+import AsignacionesPage from './Asignaciones/AsignacionesPage';
+import AsignacionCreate from './Asignaciones/AsignacionCreate';
+import AsignacionUpdate from './Asignaciones/AsignacionUpdate';
+import EmpleadosPage from './Empleados/EmpleadosPage';
+import EmpleadosCreate from './Empleados/EmpleadoCreate';
+import EmpleadosUpdate from './Empleados/EmpleadoUpdate';
+import React from 'react';
+import { BrowserRouter,Route,Routes} from 'react-router-dom';
+import Navbar from "./componets/NavBar";
+import './App.css';
 
-import Navbar from "./components/Navbar";
+
+
 
 function App() {
   return (
@@ -22,14 +27,14 @@ function App() {
         <Route path="/updateasignacion/:asignacionId" element={<AsignacionUpdate />} />
 
 
-        <Route path="/departamento" element={<DepartamentosPage />} />
-        <Route path="/departamento/createdepartamento" element={<DepartamentoCreate />} /> 
+        <Route path="/departamentos" element={<DepartamentosPage />} />
+        <Route path="/departamentos/createdepartamento" element={<DepartamentoCreate />} /> 
         <Route path="/updatedepartamento/:departamentoId" element={<DepartamentoUpdate />} />
         
 
         <Route path="/empleados" element={<EmpleadosPage />} />
         <Route path="/empleados/createempleados" element={<EmpleadosCreate />} /> 
-        <Route path="/updateempleados/:empleadosId" element={<EmpleadosUpdate />} />
+        <Route path="/updateempleado/:empleadoId" element={<EmpleadosUpdate />} />
           
 
       

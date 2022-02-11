@@ -15,7 +15,7 @@ function EmpleadoCreate() {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        const Nombre = {
+        const Empleados = {
 
             nombre: nombre,
             apellido: apellido,

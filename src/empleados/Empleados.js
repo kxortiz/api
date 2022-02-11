@@ -1,4 +1,4 @@
-function empleado(props) {
+function empleados(props) {
   return (
     <table>
       <thead >
@@ -20,4 +20,4 @@ function empleado(props) {
   );
 }
 
-export default empleado;
+export default empleados;

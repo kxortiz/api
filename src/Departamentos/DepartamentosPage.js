@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from "react";
-import Departamentos from '../Departamentos';
-import './Departamento'
+import React, { useState, useEffect } from "react";
+import Departamentos from './Departamentos';
+import Departamento from './Departamento'
 import { getListDepartamentos } from '../service/DepartamentoService'
 import { Link } from "react-router-dom";
 
 
-function DepartamentosPage () {
-    
+function DepartamentosPage() {
+
     const [departamentos, setDepartamentos] = useState([]);
 
     useEffect(() => {
@@ -19,8 +19,8 @@ function DepartamentosPage () {
 
     return (
         <div>
-            
-            <Link to ='./createdepartamento'>
+
+            <Link to='./createdepartamento'>
                 Crear Departamento
             </Link>
             <h2>LISTA DE DepartamentoS</h2>
@@ -28,8 +28,8 @@ function DepartamentosPage () {
                 {
                     departamentos.map(item =>
                         <Departamento
-                        key={item.id}
-                        itemDepartamento={item} />
+                            key={item.id}
+                            itemDepartamento={item} />
 
                     )
                 }
