@@ -1,0 +1,8 @@
+
+.box{
+    background-color: rgb(161, 160, 153);
+    border-style: dashed;
+    border-color: rgb(157, 109, 168);
+    width: 400px;
+    margin-bottom: 20px;
+}
