@@ -32,7 +32,7 @@ const updateEmpleado = async (empleado) => {
 
     const resp = await fetch(`${urlCrud}/empleados`, {
         method: 'PUT',
-        body: JSON.stringify(consulta),
+        body: JSON.stringify(empleado),
         headers: {
             'Content-type': 'application/json'
         }

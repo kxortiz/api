@@ -18,12 +18,13 @@ function DepartamentosPage() {
     }, []);
 
     return (
-        <div>
-
+        <div className="pageup">
+<div className="enlace">
             <Link to='./createdepartamento'>
                 Crear Departamento
             </Link>
-            <h2>LISTA DE DepartamentoS</h2>
+            </div>
+            <h2>Lista de Departamentos</h2>
             <Departamentos>
                 {
                     departamentos.map(item =>
@@ -33,6 +34,7 @@ function DepartamentosPage() {
 
                     )
                 }
+                
             </Departamentos>
         </div>
     );

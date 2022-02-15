@@ -12,14 +12,14 @@ function EmpleadosPage () {
 
         getListEmpleados().then(data => {
             setEmpleados(data);
-        }
-        );
+        });
+        
     }, []);
 
     return (
         <div>
             
-            <Link to ='./createempleado'>
+            <Link to ='./createempleados'>
                 Crear Empleado
             </Link>
             <h2>LISTA DE EmpleadoS</h2>

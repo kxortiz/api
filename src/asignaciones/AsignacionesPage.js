@@ -4,6 +4,7 @@ import Asignacion from './Asignacion'
 import { getListAsignaciones } from '../service/AsignacionService'
 import { Link } from "react-router-dom";
 
+
 function AsignacionesPage () {
     
     const [asignaciones, setAsignaciones] = useState([]);
@@ -13,11 +14,13 @@ function AsignacionesPage () {
         getListAsignaciones().then(data => {
             setAsignaciones(data);
         }
-        );
+        ).catch((err) => {
+            console.log(err);
+        });
     }, []);
 
     return (
-        <div>
+        <div className="asignation">
             
             <Link to ='./createasignacion'>
                 Crear Asignacion

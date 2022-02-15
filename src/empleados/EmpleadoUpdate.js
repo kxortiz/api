@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { findByIdEmpleado, updateEmpleado } from '../service/EmpleadoService'
 
 
-function EmpleadosPage() {
+function EmpleadosPage(props) {
     const { empleadoId } = useParams();
     const [empleado, setEmpleado] = useState({ nombre: '', apellido: '', cedula: '', direccion: '', edad: '', telefono: '' });
 
@@ -29,8 +29,7 @@ function EmpleadosPage() {
     useEffect(() => {
         findByIdEmpleado(empleadoId).then(data => {
             setEmpleado(data);
-        }
-        );
+        });
     }, [empleadoId]);
 
     return (

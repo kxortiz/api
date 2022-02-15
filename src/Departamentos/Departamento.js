@@ -6,7 +6,7 @@ function Departamento (props){
     return(
         <tr>
             <td> {props.itemDepartamento.descripcion} </td>
-            <td><Link to={`/updateDepartamento/${props.itemDepartamento.id}`}>Edit</Link> </td>
+            <td><Link to={`/updatedepartamento/${props.itemDepartamento.id}`}>Edit</Link> </td>
         </tr>
     );
     

@@ -1,4 +1,4 @@
-const urlCrud = 'http://localhost:8080';
+const urlCrud = 'http://localhost:8081';
 
 const getListAsignaciones = async () => {
     const response = await fetch(`${urlCrud}/asignacion`);

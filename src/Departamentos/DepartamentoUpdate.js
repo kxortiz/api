@@ -8,34 +8,54 @@ import "./Departamento.css"
 function DepartamentosPage() {
   
   const { departamentoId } = useParams();
-  const [departamento, setDepartamento] = useState({descripcion:''});
+  const [departamento, setDepartamento] = useState(
+    {
+      id: 1,
+      descripcion: ''
+    }
+  );
 
   const onSubmit = (event) => {
     event.preventDefault();
     updateDepartamento(departamento);
+    //console.log(departamento)
+    //console.log(event.target.value);
   }
+
   const onChange = (event) =>{
-    if(event.target.name==='descripcion')
-      setDepartamento({...departamento,id:event.target.value})    
+    event.preventDefault();
+    if(event.target.name==='descripcion'){
+      console.log(event.target.value);
+      setDepartamento({
+        ...departamento,
+        descripcion: event.target.value
+      })
+    }
+      // setDepartamento({
+      //   ...departamento,
+      //   id:event.target.value
+      // }
+    // )
   }
 
   useEffect(() => {    
+    console.log(departamentoId);
     findByIdDepartamento(departamentoId).then(data => {
-      setDepartamento(data);  
-    }
+        setDepartamento(data);  
+      }
     );
   }, [departamentoId]);
 
   return (
     <div className="boxUpdate">
       <form onSubmit={onSubmit} className="boxFormUpdate">
-      <h2>ACTUALIZAR Departamento</h2>
+      <h2>Actualizar Departamento</h2>
   
           <input 
-          className="formUpdateInput"
+            className="formUpdateInput"
             name="descripcion"
             placeholder="descripcion" 
-            value={descripcion.id}
+            value={departamento.descripcion}
             onChange={onChange}
    
           />

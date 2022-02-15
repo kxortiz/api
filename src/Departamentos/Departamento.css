@@ -1,8 +1,38 @@
 
 .boxUpdate{
-    background-color: rgba(110, 216, 23, 0.623);
+    background-color: rgba(105, 119, 243, 0.623);
     border-style: dashed;
     border-color: rgba(109, 137, 168, 0.459);
     width: 400px;
     margin-bottom: 20px;
+}
+
+.pageup{
+    background-color: rgba(38, 0, 255, 0.486);
+    border-style: inset;
+    border-color: rgba(0, 0, 0, 0.459);
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.enlace{
+    
+
+    background-color: rgba(0, 0, 0, 0.884);
+    border-style: dashed solid;
+    border-color: rgba(0, 0, 0, 0.459);
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.tabladepa{
+   
+
+    background-color: rgba(0, 0, 0, 0.486);
+    border-style: dashed solid;
+    border-color: rgba(0, 0, 0, 0.459);
+ 
+    justify-content: center
+    
+   
 }

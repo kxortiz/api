@@ -22,13 +22,15 @@ function App() {
       <Navbar />
       <Routes>        
       
+
         <Route path="/asignaciones" element={<AsignacionesPage />} />
         <Route path="/asignaciones/createasignacion" element={<AsignacionCreate />} /> 
         <Route path="/updateasignacion/:asignacionId" element={<AsignacionUpdate />} />
 
+        <Route path="/" element={<DepartamentosPage />} />
 
-        <Route path="/departamentos" element={<DepartamentosPage />} />
-        <Route path="/departamentos/createdepartamento" element={<DepartamentoCreate />} /> 
+        <Route path="/departamento" element={<DepartamentosPage />} />
+        <Route path="/departamento/createdepartamento" element={<DepartamentoCreate />} /> 
         <Route path="/updatedepartamento/:departamentoId" element={<DepartamentoUpdate />} />
         
 
